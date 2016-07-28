@@ -2,20 +2,76 @@
 <html ng-app="MyApp">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="./styles/dna.css">
   <script src="../node_modules/angular/angular.min.js"></script>
   <script src="app.js"></script>
   <title></title>
 </head>
 
 <body ng-controller="MainController">
-  <div id="display">
-  </div>
   <div>
-    <form ng-submit="post()">
-      <input type="file" ng-model="file"/>
-      <button>Submit</button>
-    </form>
+    <button ng-click="get()">Get Sequence!</button>
     <br> {{ message }}
+  </div>
+  <div class="canvas" ng-show="working">
+    <div class="group group--one">
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+    </div>
+    <div class="group group--two">
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+      <div class="dot dot--aqua"></div>
+      <div class="dot dot--gold"></div>
+      <div class="dot dot--tomato"></div>
+    </div>
   </div>
 </body>
 

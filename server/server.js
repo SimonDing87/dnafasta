@@ -11,15 +11,11 @@ app.use('/node_modules', express.static(path.join(__dirname, '../node_modules'))
 app.use(express.static('client'));
 
 // routes
-app.post('/endpoint', function(req, res) {
-  res.send("hello!");
+app.get('/test', function(req, res) {
+  fileReader.getSequence(TEXT_SOURCE, function(result) {
+    res.send(result);
+  });
 });
-
-app.get('/storage.json', function(req, res) {
-  res.send(fileReaderSync.storage);
-});
-// fileReader.getSequence(TEXT_SOURCE, console.log);
-
 
 // listen
 var port = process.env.PORT || 3000;
