@@ -114,6 +114,7 @@ module.exports = function() {
   }
 
   function findHead(fragmentMap) {
+    // finds head of linked list
     var hashMap = {};
     for (var key in fragmentMap) {
       hashMap[key] = true;
@@ -133,14 +134,15 @@ module.exports = function() {
   }
 
   function constructResult(fragmentMap, parsedData) {
+    // constructs complete sequence from linked list fragment map
     var output = "";
 
-    var currentFragment = findHead(fragmentMap);
+    var currentFragment = findHead(fragmentMap); // start from head
 
     while (fragmentMap[currentFragment]) {
-      console.log(currentFragment + " -> " + fragmentMap[currentFragment].next);
+      // console.log(currentFragment + " -> " + fragmentMap[currentFragment].next);
       output += parsedData[currentFragment].substring(0, fragmentMap[currentFragment].offset);
-      //while loop will exit if there is no next fragment
+      //while loop will exit when tail is reached
       currentFragment = fragmentMap[currentFragment].next;
     }
     output += parsedData[currentFragment];
