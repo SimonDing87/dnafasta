@@ -1,9 +1,8 @@
-var express = require('express');
-var bodyParser = require("body-parser");
-var path = require('path');
-var app = express();
-
-var TEXT_SOURCE = './server/data/coding_challenge_data_set.txt';
+var express = require('express'),
+  bodyParser = require("body-parser"),
+  path = require('path'),
+  app = express(),
+  TEXT_SOURCE = './server/data/coding_challenge_data_set.txt';
 
 // serve static files
 app.use(bodyParser.json());
