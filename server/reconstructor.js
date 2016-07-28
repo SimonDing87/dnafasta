@@ -81,6 +81,23 @@ module.exports = function() {
   }
 
   function mapFragments(parsedData) {
+    // takes parsedData and creates a linked list of fragment relationships.
+    // the offset property indiciates the index at which the next fragment overlaps the first
+    // output:
+    // {
+    //   frag1: {         // (head)
+    //     next: frag3,
+    //     offset: 4
+    //   },
+    //   frag2: {         // (tail)
+    //     next: frag4,
+    //     offset: 2
+    //   },
+    //   frag3: {
+    //     next: frag2,
+    //     offset: 6
+    //   }
+    // }
     var results = {};
     for (var key1 in parsedData) {
       for (var key2 in parsedData) {
