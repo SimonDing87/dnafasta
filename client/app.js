@@ -9,14 +9,14 @@ angular.module('MyApp', [])
       var start = Date.now();
       $scope.working = true;
       $http({
-          method: 'GET',
-          url: '/test'
-        }).then(function(data) {
-          $scope.working = false;
-          $scope.result = data.data;
-          $scope.message = "Completed in " + (Date.now() - start) / 1000 + "seconds";
-        });
-    }
+        method: 'GET',
+        url: '/test'
+      }).then(function(data) {
+        $scope.working = false;
+        $scope.result = data.data;
+        $scope.message = "Completed in " + (Date.now() - start) / 1000 + "seconds";
+      });
+    };
 
     $scope.result = "";
   }]);

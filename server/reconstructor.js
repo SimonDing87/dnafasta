@@ -17,11 +17,11 @@ module.exports = function() {
       lastSubsBegin = 0;
 
     // init 2D array with 0
-    for (var i = 0; i < str1Length; i++) {
+    for (var row = 0; row < str1Length; row++) {
       var subArray = new Array(str2Length);
-      for (var j = 0; j < str2Length; j++)
-        subArray[j] = 0;
-      num[i] = subArray;
+      for (var col = 0; col < str2Length; col++)
+        subArray[col] = 0;
+      num[row] = subArray;
     }
 
     var thisSubsBegin = null;
@@ -78,7 +78,7 @@ module.exports = function() {
       obj[currentKey] += array[i];
     }
     return obj;
-  }
+  };
 
   function mapFragments(parsedData) {
     // takes parsedData and creates a linked list of fragment relationships.
@@ -116,18 +116,18 @@ module.exports = function() {
   function findHead(fragmentMap) {
     // finds head of linked list
     var hashMap = {};
-    for (var key in fragmentMap) {
-      hashMap[key] = true;
+    for (var key1 in fragmentMap) {
+      hashMap[key1] = true;
     }
-    for (var key in fragmentMap) {
-      if (hashMap[fragmentMap[key].next]) {
-        hashMap[fragmentMap[key].next] = false;
+    for (var key2 in fragmentMap) {
+      if (hashMap[fragmentMap[key2].next]) {
+        hashMap[fragmentMap[key2].next] = false;
       }
     }
 
-    for (var key in hashMap) {
-      if (hashMap[key]) {
-        return key;
+    for (var key3 in hashMap) {
+      if (hashMap[key3]) {
+        return key3;
       }
     }
     return "Could not find head!";
@@ -156,5 +156,5 @@ module.exports = function() {
     mapFragments: mapFragments,
     findHead: findHead,
     constructResult: constructResult
-  }
-}
+  };
+};
