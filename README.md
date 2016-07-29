@@ -13,6 +13,15 @@ Build Tools: Grunt.js
 
 Testing: Jasmine.js
 
+## Installation
+
+`npm install`
+
+## Testing
+
+`jasmine`
+
+(TODO: add details to installation and testing)
 
 ## Introduction
 To sequence the DNA for a given individual we typically fragment each chromosome to many small pieces that can be sequenced in parallel and then re-assemble the sequenced fragments into one long DNA sequence. In this task we ask that you take on a specific subtask of this process.
@@ -64,7 +73,7 @@ Space complexity: O(n)
 
 The length of the final result will depend on how many fragments there are.
 
-### Comments
+## Comments
 
 The DNA animation I used was from:
 
@@ -72,4 +81,3 @@ http://codepen.io/heartbox/pen/NNQPOj
 
 There are several structural / architectural changes I would like to make, but for a small project like this it is not worth the hassle.
 
-TODO: add installation section to readme
