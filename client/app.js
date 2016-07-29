@@ -5,7 +5,7 @@ angular.module('MyApp', [])
     $scope.message = "Get Sequence!";
     $scope.working = false;
     $scope.get = function() {
-      $scope.message = "Processing...(may take 30s~)";
+      $scope.message = "Processing (may up to a minute...)";
       var start = Date.now();
       $scope.working = true;
       $http({
