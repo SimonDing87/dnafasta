@@ -63,3 +63,13 @@ n = number of nodes in linked list
 Space complexity: O(n)
 
 The length of the final result will depend on how many fragments there are.
+
+### Comments
+
+The DNA animation I used was from:
+
+http://codepen.io/heartbox/pen/NNQPOj
+
+There are several structural / architectural changes I would like to make, but for a small project like this it is not worth the hassle.
+
+TODO: add installation section to readme
