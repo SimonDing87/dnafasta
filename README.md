@@ -79,5 +79,5 @@ The DNA animation I used was from:
 
 http://codepen.io/heartbox/pen/NNQPOj
 
-There are several structural / architectural changes I would like to make, but for a small project like this it is not worth the hassle.
+If the code takes too long to execute, I have put the solution in server/data/solution.txt
 
