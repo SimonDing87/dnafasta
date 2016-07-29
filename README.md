@@ -34,7 +34,7 @@ The output of your program should be this unique sequence that contains each of 
 ## Approach
 
 ### 1) Longest Common Substring
-My first goal was to figure out a way to see if a fragment overlapped another fragment by more than 50% of its length.  After coming up with an inefficient brute force method myself, I did a quick google search and discovered several better ways to solve this (https://en.wikipedia.org/wiki/Longest_common_substring_problem).  I chose to solution with dynamic programming because it was easier for me to understand and there was code readily available.  This is implemented as `longestCommonSubstring` in reconstructor.js
+My first goal was to figure out a way to see if a fragment overlapped another fragment by more than 50% of its length.  After coming up with an inefficient brute force method myself, I did a quick google search and discovered several better ways to solve this (https://en.wikipedia.org/wiki/Longest_common_substring_problem).  I chose the solution with dynamic programming because it was easier for me to understand and there was code readily available.  This is implemented as `longestCommonSubstring` in reconstructor.js
 
 This algorithm compares two strings and builds a 2D array to stores the length of the current matching substring.  If a matches continue to occur for pairs of characters, the length from the previous indicies, (i-1, j-1), is used to count the increasing length. An example with "ABAB" and "BABA" is on the wiki page.
 
