@@ -10,69 +10,72 @@
 
 <body ng-controller="MainController">
   <div>
-    <button ng-click="get()">Get Sequence!</button>
-    <br> {{ message }}
+    <button ng-click="get()" ng-hide="working">Process</button>
+    <br>
+    {{ message }}
   </div>
-  <div class="canvas" ng-show="working">
-    <div class="group group--one">
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
+  <div id=sequence>
+    <div class="canvas" ng-show="working">
+      <div class="group group--one">
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+      </div>
+      <div class="group group--two">
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+        <div class="dot dot--aqua"></div>
+        <div class="dot dot--gold"></div>
+        <div class="dot dot--tomato"></div>
+      </div>
     </div>
-    <div class="group group--two">
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-      <div class="dot dot--aqua"></div>
-      <div class="dot dot--gold"></div>
-      <div class="dot dot--tomato"></div>
-    </div>
-  </div>
+    {{ result }} </div>
 </body>
 
 </html>

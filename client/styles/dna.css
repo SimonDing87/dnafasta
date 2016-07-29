@@ -508,3 +508,22 @@ body {
 .dot--tomato::before {
   background-color: tomato;
 }
+
+#sequence {
+  margin: 0 auto;
+  font-size: 10px;
+  width: 80%;
+  height: 50%;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
