@@ -31,9 +31,11 @@ describe('utility', function() {
       expect(typeof utility.longestCommonSubstring).toBe('function');
       done();
     })
-    it('should work (TODO)', function(done) {
-      // test functionality
-      // utility.longestCommonSubstring();
+    it('should take two strings and return longest substring, length, and offset', function(done) {
+      var result = utility.longestCommonSubstring('hiworld', 'worldismine');
+      expect(result.sequence).toBe('world');
+      expect(result.length).toBe(5);
+      expect(result.offset).toBe(2);
       done();
     })
   });
