@@ -2,8 +2,8 @@ var express = require('express'),
   bodyParser = require("body-parser"),
   path = require('path'),
   app = express(),
-  fileReader = require('./fileReader.js')();
-  TEXT_SOURCE = './server/data/coding_challenge_data_set.txt';
+  reconstructor = require('./reconstructor.js')();
+  FASTA_FILE = './server/data/coding_challenge_data_set.txt';
 
 // serve static files
 app.use(bodyParser.json());
@@ -12,7 +12,7 @@ app.use(express.static('client'));
 
 // routes
 app.get('/test', function(req, res) {
-  fileReader.getSequence(TEXT_SOURCE, function(result) {
+  reconstructor.constructFASTA(FASTA_FILE, function(result) {
     res.send(result);
   });
 });
