@@ -1,7 +1,9 @@
 var request = require('request'),
   base_url = 'http://localhost:3000/',
   server = require('./../server/server.js'),
-  fileReader = require('./../server/fileReader.js')(),
+  textParser = require('./../server/textParser.js')(),
+  FASTALogic = require('./../server/FASTALogic.js')(),
+  utility = require('./../server/utility.js')(),
   reconstructor = require('./../server/reconstructor.js')(),
   TEST_FILE = 'spec/test_data/test_data.txt';
 
@@ -14,72 +16,76 @@ describe('Server', function() {
   });
 });
 
-describe('fileReader', function() {
+describe('reconstructor', function() {
   it('should take a formatted input text file and return constructed DNA sequence', function(done) {
-    fileReader.getSequence(TEST_FILE, function(data) {
+    reconstructor.constructFASTA(TEST_FILE, function(data) {
       expect(data).toBe('ATTAGACCTGCCGGAATAC'); // from given text
       done();
     });
   })
 })
 
-describe('reconstructor', function() {
+describe('utility', function() {
   describe('should have a method called longestCommonSubstring which', function() {
     it('should exist', function(done) {
-      expect(typeof reconstructor.longestCommonSubstring).toBe('function');
+      expect(typeof utility.longestCommonSubstring).toBe('function');
       done();
     })
     it('should work (TODO)', function(done) {
       // test functionality
-      // reconstructor.longestCommonSubstring();
+      // utility.longestCommonSubstring();
       done();
     })
   });
+});
 
-  describe('should have a method called parseData which', function() {
+describe('textParser', function() {
+  describe('should have a method called parseFASTA which', function() {
     it('should exist', function(done) {
-      expect(typeof reconstructor.parseData).toBe('function');
+      expect(typeof textParser.parseFASTA).toBe('function');
       done();
     })
     it('should work (TODO)', function(done) {
       // test functionality
-      // reconstructor.parseData();
+      // textParser.parseData();
       done();
     })
   });
+})
 
+describe('FASTALogic', function() {
   describe('should have a method called mapFragments which', function() {
     it('should exist', function(done) {
-      expect(typeof reconstructor.mapFragments).toBe('function');
+      expect(typeof FASTALogic.mapFragments).toBe('function');
       done();
     })
     it('should work (TODO)', function(done) {
       // test functionality
-      // reconstructor.mapFragments();
+      // FASTALogic.mapFragments();
       done();
     })
   });
 
   describe('should have a method called findHead which', function() {
     it('should exist', function(done) {
-      expect(typeof reconstructor.findHead).toBe('function');
+      expect(typeof FASTALogic.findHead).toBe('function');
       done();
     })
     it('should work (TODO)', function(done) {
       // test functionality
-      // reconstructor.findHead();
+      // FASTALogic.findHead();
       done();
     })
   });
 
   describe('should have a method called constructResult which', function() {
     it('should exist', function(done) {
-      expect(typeof reconstructor.constructResult).toBe('function');
+      expect(typeof FASTALogic.constructResult).toBe('function');
       done();
     })
     it('should work (TODO)', function(done) {
       // test functionality
-      // reconstructor.constructResult();
+      // FASTALogic.constructResult();
       done();
     })
   });
