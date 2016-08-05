@@ -48,8 +48,17 @@ describe('textParser', function() {
       done();
     })
     it('should work (TODO)', function(done) {
-      // test functionality
-      // textParser.parseData();
+      var sampleRawText = ">Frag_56\nATTAGACCTG\n>Frag_57\nCCTGCCGGAA\n>Frag_58\nAGACCTGCCG\n>Frag_59\nGCCGGAATAC",
+        parsedFASTA = textParser.parseFASTA(sampleRawText),
+        keys = Object.keys(parsedFASTA);
+      expect(keys[0]).toBe('Frag_56');
+      expect(parsedFASTA[keys[0]]).toBe('ATTAGACCTG');
+      expect(keys[1]).toBe('Frag_57');
+      expect(parsedFASTA[keys[1]]).toBe('CCTGCCGGAA');
+      expect(keys[2]).toBe('Frag_58');
+      expect(parsedFASTA[keys[2]]).toBe('AGACCTGCCG');
+      expect(keys[3]).toBe('Frag_59');
+      expect(parsedFASTA[keys[3]]).toBe('GCCGGAATAC');
       done();
     })
   });
