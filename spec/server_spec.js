@@ -70,7 +70,7 @@ describe('FASTALogic', function() {
       expect(typeof FASTALogic.mapFragments).toBe('function');
       done();
     })
-    it('should work (TODO)', function(done) {
+    it('should process a parsed FASTA object and return a fragment map (TODO)', function(done) {
       // test functionality
       // FASTALogic.mapFragments();
       done();
@@ -82,7 +82,7 @@ describe('FASTALogic', function() {
       expect(typeof FASTALogic.findHead).toBe('function');
       done();
     })
-    it('should work (TODO)', function(done) {
+    it('should process a FASTA fragment map and return the fragment that has no other fragments pointing to it', function(done) {
       // test functionality
       // FASTALogic.findHead();
       done();
@@ -94,7 +94,7 @@ describe('FASTALogic', function() {
       expect(typeof FASTALogic.constructResult).toBe('function');
       done();
     })
-    it('should work (TODO)', function(done) {
+    it('should process a FASTA fragment map and return a constructed sequence', function(done) {
       // test functionality
       // FASTALogic.constructResult();
       done();
