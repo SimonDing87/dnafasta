@@ -47,7 +47,7 @@ describe('textParser', function() {
       expect(typeof textParser.parseFASTA).toBe('function');
       done();
     })
-    it('should work (TODO)', function(done) {
+    it('should parse FASTA formatted text file into object', function(done) {
       var sampleRawText = ">Frag_56\nATTAGACCTG\n>Frag_57\nCCTGCCGGAA\n>Frag_58\nAGACCTGCCG\n>Frag_59\nGCCGGAATAC",
         parsedFASTA = textParser.parseFASTA(sampleRawText),
         keys = Object.keys(parsedFASTA);
