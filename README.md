@@ -1,6 +1,9 @@
 ## Synopsis
 
-This goal of this project is to reconstruct a sequence of DNA that have been separated into fragments in FASTA format (https://en.wikipedia.org/wiki/FASTA_format).  
+This goal of this project is to reconstruct a sequence of DNA that have been separated into fragments in FASTA format (https://en.wikipedia.org/wiki/FASTA_format).
+
+Visit deployed app here:
+https://dnafasta.herokuapp.com/
 
 ## Tech Stack
 All technologies used were built from JavaScript.
